@@ -8,6 +8,8 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import model.Atendente;
+import model.Atendimento;
+import model.Cliente;
 import model.Entregador;
 import model.Funcionario;
 
@@ -32,6 +34,8 @@ public class HibernateUtil {
 
 				configuration.setProperties(settings);
 				configuration.addAnnotatedClass(Entregador.class);
+				configuration.addAnnotatedClass(Atendimento.class);
+				configuration.addAnnotatedClass(Cliente.class);
 				configuration.addAnnotatedClass(Atendente.class);
 				configuration.addAnnotatedClass(Funcionario.class);
 
